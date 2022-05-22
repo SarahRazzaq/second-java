@@ -1,21 +1,31 @@
-const age = 16;
+//Get data
+const nameInput = document.querySelector("#name");
+const email = document.querySelector("#email");
+const message = document.querySelector("#message");
+const success = document.querySelector("#success");
+const errorNodes = document.querySelectorAll(".error");
+//validate data
+function validateForm(){
+   
+    clearText();
 
-const isOfAge = age >= 18;
-
-if (isOfAge){
-    console.log("Yay!!! Your old enough to get a license!!");
+    if (nameInput.value.length < 1){
+        errorNodes[0].innerText = "Name cannot be blank";
+        nameInput.classList.add("error-border");
+    }
+    if (!emailIsValid(email.value)){
+        errorNodes[1].innerText = "Invalid email address";
+        email.classList.add("error-border");
+    }
 }
-else {
-    console.log("Sorry, you have to wait a few years");
+function clearText (){
+    for (let i = 0; i < errorNodes.length; i++){
+        errorNodes[i].innerText = "";
+    }
+    nameInput.classList.remove ("error-border");
+    email.classList.remove("error-border");
 }
-if (age >= 18) {
-    console.log("Yay! Your're ready to take a license")
-}else {
-    const yearsLeft = 18 - age;
-    console.log(`Sorry, your're to young. Wait another ${yearsLeft} years!`);
-}
-if (age>=18) {
-    console.log("Yay! Your're ready to take a license")
-} else {
-    
+function emailIsValid(email){
+    let pattern = /\S+@\S+\.\S+/;
+    return pattern.test(email);
 }

@@ -19,23 +19,24 @@
         </nav>
     </header>
     <div class="main-contact">
-        <form>
+        <form onsubmit="event.preventDefault();validateForm()">
             <h1>Contact Us</h1>
             <label for="name">Name:</label>
-            <input type="text" id="name" name="name" placeholder="Your name...">
-            <small class="error"></small>
-            <label for="email">email:</label>
-            <input type="text" id="email" name="name" placeholder="Your email...">
-            <small class="error"></small>
+            <input type="text" id="name" name="name" placeholder="Your name..."><br>
+            <small class="error"></small><br>
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="name" placeholder="Your email..."><br>
+            <small class="error"></small><br>
             <label for="message">Message:</label><br>
-            <textarea id="message" name="name" placeholder="Your message..." rows="6"></textarea>
+            <textarea id="message" name="message" placeholder="Your message..." rows="6"></textarea>
             <small class="error"></small>
             <div class="btn">
-                <input type="submit" value="Submit">
+                <input type="submit" value="Send Message">
+                <p id="success">Your message is sent!</p>
             </div>
           </form> 
     </div>
-    <script src="script.js"></script>
+    <script src="../script.js"></script>
     <footer>
         <h2>Sarah Razzaq</h2>
         <h4>Tel:0708-451843</h4>
