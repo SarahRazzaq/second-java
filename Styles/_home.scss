@@ -1,0 +1,19 @@
+.main{
+    height: 600px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-image{
+    margin-top: 30px;
+}
+.main-text{
+    margin-left: 20px;
+    max-width: 400px;
+    height: 400px;
+    display: flex;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 26px;
+    align-items: center;
+}
