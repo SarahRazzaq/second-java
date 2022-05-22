@@ -155,3 +155,8 @@ ul.topnav li {
       -ms-flex-align: center;
           align-items: center;
 }
+
+.main-contact {
+  max-width: 400px;
+  height: 500px;
+}
